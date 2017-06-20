@@ -150,11 +150,11 @@ angular
           batches[batchIndex].push(arr[i]);
         }
 
-				for (var i = 0; i < batches.length; i += 1) {
-					$timeout((batch) => {
-						_this.handleSubmitTracksToPlaylist(batch, user_id, playlist_id, successCallback, errorCallback);
+	for (var i = 0; i < batches.length; i += 1) {
+	  $timeout((batch) => {
+	    _this.handleSubmitTracksToPlaylist(batch, user_id, playlist_id, successCallback, errorCallback);
           }, i*1000, true, batches[i]);
-				}
+        }
       },
       deleteTracks: function(user_id, playlist_id, access_token, arr, callback) {
         var _this = this;
